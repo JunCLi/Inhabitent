@@ -28,11 +28,12 @@ gulp.task('sass', () => {
         browsers: ['last 2 versions']
       })
     )
-    .pipe(gulp.dest(cssDest))
+    // .pipe(gulp.dest(cssDest))
     .pipe(cssnano())
     .pipe(rename('style.css'))
     .pipe(sourcemaps.write('../maps'))
-    .pipe(gulp.dest(cssDest));
+    .pipe(gulp.dest(cssDest))
+    .pipe(browserSync.stream());
 });
 
 
@@ -74,7 +75,7 @@ gulp.task('browser-sync', () => {
     './**/*.php'
   ];
 
-  browserSync.init(files, {
+  browserSync.init({
     proxy: 'http://localhost/Xampp/Sandbox/wordpress-stuff/project-4-inhabitent/test'
   });
 

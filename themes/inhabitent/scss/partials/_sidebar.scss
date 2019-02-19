@@ -1,5 +1,7 @@
 .widget-area {
   color: #404040;
+  // background-color: black;
+
 
   h2 {
     text-transform: uppercase;
@@ -10,6 +12,9 @@
     color: #248a83;
   }
 
+  span {
+    font-weight: bold;
+  }
 
   .widget_archive {
     ul {
