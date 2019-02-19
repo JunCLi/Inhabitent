@@ -121,6 +121,7 @@ add_action( 'widgets_init', 'demo_theme_widgets_init' );
  */
 function demo_theme_scripts() {
 	wp_enqueue_style( 'demo-theme-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'demo-theme-fontawesome', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css');
 
 	wp_enqueue_script( 'demo-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
