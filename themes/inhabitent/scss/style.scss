@@ -1,0 +1,26 @@
+@import './partials/starter';
+@import './partials/main';
+@import './partials/sidebar';
+@import './partials/header';
+
+/*
+=========================
+General Styles
+=========================
+*/
+
+.container, .site-content {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/*
+=========================
+Site Content Styles
+=========================
+*/
+
+.site-content {
+  display: grid;
+  grid-template-columns: 8fr 3fr;
+}

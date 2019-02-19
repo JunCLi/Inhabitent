@@ -1,0 +1,47 @@
+/*
+=========================
+Site Head Styles
+=========================
+*/
+
+$brand-logo-width: 50px;
+
+.site-header {
+  padding: .5rem 0;
+
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.site-branding {
+  width: $brand-logo-width;
+  height: $brand-logo-width * 2 / 3;
+}
+
+/*
+=========================
+General Navagation Styles
+=========================
+*/
+
+.main-navigation ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+
+  li {
+    padding: 0 10px
+  }
+
+  a {
+    color: #248a83;
+
+    &:hover {
+      color: #2f1339;
+    }
+  }
+}

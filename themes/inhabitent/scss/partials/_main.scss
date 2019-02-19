@@ -1,0 +1,22 @@
+.blog {
+
+  .site-header {
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  $padding: 3.5vw;
+
+  .content-area {
+    padding: $padding $padding 0 0;
+
+    border-right: 1px solid #e1e1e1;
+  }
+
+  .widget-area {
+    padding: $padding 0 0 $padding;
+  }
+
+
+
+
+}
