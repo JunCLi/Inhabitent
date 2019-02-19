@@ -20,7 +20,6 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-	<i class="fab fa-twitter"></i>
 		<main id="main" class="site-main">
 
 		<?php

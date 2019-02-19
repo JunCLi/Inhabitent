@@ -53,3 +53,19 @@ function demo_theme_customize_preview_js() {
 	wp_enqueue_script( 'demo-theme-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'demo_theme_customize_preview_js' );
+
+
+// Add custom logo
+function childtheme_custom_login() {
+	echo '<style type="text/css">                                                                   
+		#login h1 a {
+			margin: 0;
+			width: 100%;
+
+			background-image:url('.get_stylesheet_directory_uri().'/images/inhabitent-logo-text-dark.svg);
+			background-size: 100% 100%;
+		}                            
+  </style>';
+}
+ 
+add_action('login_head', 'childtheme_custom_login');

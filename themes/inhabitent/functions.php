@@ -134,6 +134,17 @@ function demo_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'demo_theme_scripts' );
 
 /**
+ * Enable uploading SVG files to gallery
+ */
+function add_file_types_to_uploads($file_types) {
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$file_types = array_merge($file_types, $new_filetypes );
+	return $file_types;
+}
+add_action('upload_mimes', 'add_file_types_to_uploads');
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -160,10 +171,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-function add_file_types_to_uploads($file_types) {
-	$new_filetypes = array();
-	$new_filetypes['svg'] = 'image/svg+xml';
-	$file_types = array_merge($file_types, $new_filetypes );
-	return $file_types;
-}
-add_action('upload_mimes', 'add_file_types_to_uploads');
+
+

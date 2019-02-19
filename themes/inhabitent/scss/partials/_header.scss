@@ -28,6 +28,7 @@ General Navagation Styles
 =========================
 */
 
+
 .main-navigation ul {
   display: flex;
   flex-flow: row nowrap;
@@ -39,9 +40,19 @@ General Navagation Styles
 
   a {
     color: #248a83;
+    text-transform: uppercase;
 
     &:hover {
       color: #2f1339;
+    }
+  }
+}
+
+.home {
+  .main-navigation ul a {
+    color: white;
+    &:hover {
+      color: #f0e4d1;
     }
   }
 }
