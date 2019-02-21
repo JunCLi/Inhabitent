@@ -1,23 +1,28 @@
+/*!
+Theme Name: Inhabitent-JCL
+Theme URI: 
+Author: Jun C Li
+Author URI: 
+Description: Theme to recreate the website demonstrated on project-4
+Version: 1.0.0
+License: 
+License URI:
+Tags: 
+
+This theme is built on top ofUnderscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+*/
+
+
+@import './partials/variables';
 @import './partials/starter';
-@import './partials/main';
+@import './partials/blog-structure';
 @import './partials/sidebar';
 @import './partials/header';
 @import './partials/front-page';
+@import './partials/main';
+@import './partials/footer';
 
-/*
-=========================
-General Styles
-=========================
-*/
 
-.container {
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-/*
-=========================
-Site Content Styles
-=========================
-*/
 

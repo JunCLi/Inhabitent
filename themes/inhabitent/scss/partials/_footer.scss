@@ -1,0 +1,25 @@
+.site-footer {
+  background: url('./images/dark-wood.png') repeat center;
+
+
+  .footer-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    justify-items: center;
+
+
+    margin: 0 10%;  
+
+    .text-logo {
+
+      width: 50%;
+      
+      img {
+        width: 500px;
+        height: 50%;
+      }
+    }
+  }
+
+
+}

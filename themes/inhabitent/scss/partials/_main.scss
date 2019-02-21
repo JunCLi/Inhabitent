@@ -1,28 +1,24 @@
-.blog {
+/*
+=========================
+General Styles
+=========================
+*/
 
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
 
-  .site-header {
-    border-bottom: 1px solid #e1e1e1;
-  }
+/*
+=========================
+Site Content Styles
+=========================
+*/
 
-  $padding: 3.5vw;
+// body {
+//   margin: 0 20px;
+// }
 
-  .site-content {
-    display: grid;
-    grid-template-columns: 8fr 3fr;
-  }
-
-  .content-area {
-    padding: $padding $padding 0 0;
-
-    border-right: 1px solid #e1e1e1;
-  }
-
-  .widget-area {
-    padding: $padding 0 0 $padding;
-  }
-
-
-
-
+a {
+  text-decoration: none;
 }

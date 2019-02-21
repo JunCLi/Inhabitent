@@ -14,18 +14,24 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<div class="footer-info">
+			<div class="contact-info">
+				<h4>Contact Info</h3>
+				<a>info@inhabitent.com</a>
+				<a>778-456-7891</a>
+			</div>
+			<div>
+				<h4>Business Hours </h4>
+				<p><span>Monday-Friday:</span> 9am to 5pm</p>
+				<p><span>Saturday:</span> 10am to 2pm</p>
+				<p><span>Sunday</span> Closed</p>
+			</div>
+			<div class="text-logo">
+				<img src="../images/inhabitent-logo-text.svg">
+			</div>
+		</div>	
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'demo-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'demo-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'demo-theme' ), 'demo-theme', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

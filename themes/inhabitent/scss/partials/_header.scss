@@ -4,8 +4,6 @@ Site Head Styles
 =========================
 */
 
-$brand-logo-width: 50px;
-
 .site-header {
   padding: .5rem 0;
 
@@ -39,11 +37,11 @@ General Navagation Styles
   }
 
   a {
-    color: #248a83;
+    color: $green-brand-colour;
     text-transform: uppercase;
 
     &:hover {
-      color: #2f1339;
+      color: $purple-brand-colour;
     }
   }
 }
@@ -52,7 +50,7 @@ General Navagation Styles
   .main-navigation ul a {
     color: white;
     &:hover {
-      color: #f0e4d1;
+      color: $yellow-brand-colour;
     }
   }
 }

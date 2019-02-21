@@ -1,14 +1,11 @@
 .widget-area {
-  color: #404040;
-
-
   h2 {
     text-transform: uppercase;
   }
 
   a {
     text-decoration: none;
-    color: #248a83;
+    color: $green-brand-colour;
   }
 
   span {
