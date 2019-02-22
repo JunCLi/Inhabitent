@@ -5,7 +5,7 @@
   =========================
   */
   .entry-header {
-    height: 90vh;
+    height: 95vh;
     background: url('./images/inhabitent-logo-full.svg') no-repeat center 40%;
     background-size: 20%;
     z-index: 1;
@@ -37,6 +37,44 @@
 
   /*
   =========================
+  Shop Stuff on Front Page Styles
+  =========================
+  */
+
+  .shop-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
+  }
+
+  .product-type {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    padding: 12px;
+
+    text-align: center;
+    border: 1px solid $light-grey-border;
+    border-top: 5px solid $light-grey-border;
+
+    img {
+      width: 40%;
+    }
+
+    a {
+      display: inline-block;
+
+      width: 50%;
+      padding: 10px;
+
+      background-color: $green-brand-colour;
+      color: white;
+    }
+  }
+
+  /*
+  =========================
   Journal on Front Page Styles
   =========================
   */
@@ -64,7 +102,7 @@
       // flex-flow: column nowrap;
       
       height: 100%;
-      padding: 10px;
+      padding: 12px;
   
       border: 1px solid $light-grey-border;
       border-top: 5px solid $light-grey-border;
@@ -99,7 +137,7 @@
     .read-more-button {
       display: inline-block;
       position: absolute;
-      bottom: 10px;
+      bottom: 12px;
       
       width: 40%;
       padding: 10px 15px;

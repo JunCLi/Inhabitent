@@ -38,11 +38,10 @@
     ?>
 
 
-    <section class="shop-stuff">
-      <div class="shop-container">
-        
-        <h2>
+    <section class="shop-stuff-section">
+      <h2>Shop Stuff</h2> 
 
+      <div class="shop-container">  
         <?php $terms =get_terms ( array(
           'taxonomy' => 'product_type',
           'hide_empty' => false,
@@ -50,10 +49,11 @@
         ));
 
         foreach ($terms as $term) : ?>
-          <div class="">
+          <div class="product-type">
+            <img src='https://via.placeholder.com/150'>
             <p><?php echo $term->description ?></p>
-            <p><a href="<?php echo get_term_link($term); ?>" class="btn"><?php echo 
-          $term->name; ?></a></p>
+            <a href="<?php echo get_term_link($term); ?>" class="btn"><?php echo 
+          $term->name; ?></a>
           </div>
 
         <?php endforeach; ?>
@@ -85,6 +85,13 @@
           </div>
         <?php endforeach;  wp_reset_postdata();?>
         </div>
+    </section>
+
+    <section class="adventure-section">
+      <h2>Latest Adventures</h2>
+      <?php 
+        // $adventure
+      ?>
     </section>
 
 	</div><!-- .entry-content -->
