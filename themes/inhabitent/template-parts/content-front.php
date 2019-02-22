@@ -11,24 +11,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				demo_theme_posted_on();
-				// demo_theme_comments_link();
-				demo_theme_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-		<?php demo_theme_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
 
@@ -44,14 +26,67 @@
 					),
 				)
 			),
-			get_the_title()
+      get_the_title()
+      
+
 		) );
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'demo-theme' ),
 			'after'  => '</div>',
 		) );
-		?>
+    ?>
+
+
+    <section class="shop-stuff">
+      <div class="shop-container">
+        
+        <h2>
+
+        <?php $terms =get_terms ( array(
+          'taxonomy' => 'product_type',
+          'hide_empty' => false,
+          'number' => 4,
+        ));
+
+        foreach ($terms as $term) : ?>
+          <div class="">
+            <p><?php echo $term->description ?></p>
+            <p><a href="<?php echo get_term_link($term); ?>" class="btn"><?php echo 
+          $term->name; ?></a></p>
+          </div>
+
+        <?php endforeach; ?>
+      </div>
+    </section>
+
+
+    <section class="journal-section">
+      <h2>Inhabitent Journal</h2>
+
+      <?php
+        $journalPostsArgs = array('post_type' => 'post', 'posts_per_page' => 3);
+        $journalPosts = get_posts($journalPostsArgs);
+        ?>
+
+        <div class="journal-container">
+        <?php foreach ($journalPosts as $post) : setup_postdata($post); ?>
+          <div class="journal">
+            <?php the_post_thumbnail('large'); ?>
+            <div class="journal-content">
+              <p class="journal-meta">
+                <?php demo_theme_posted_on(); 
+                echo " / ";
+                demo_theme_comment_number() ?>
+              </p>
+              <h3><?php the_title() ?></h3>
+              <a class="read-more-button" href="<?php the_permalink(); ?>">Read Entry</a>
+            </div>
+          </div>
+        <?php endforeach;  wp_reset_postdata();?>
+        </div>
+    </section>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

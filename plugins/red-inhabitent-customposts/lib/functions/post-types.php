@@ -59,7 +59,7 @@ function new_custom_posts() {
     'publicly_queryable'    => true,
     'capability_type'       => 'post',
     'show_in_rest'          => true,
-    'template_lock' => 'all', 
+    // 'template_lock' => 'all', 
     'template' => array(
       array('core/paragraph', array(
       'placeholder' => 'Add your Adventures blurb here.',

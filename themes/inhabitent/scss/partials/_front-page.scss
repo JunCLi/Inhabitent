@@ -1,12 +1,17 @@
 .home {
+  /*
+  =========================
+  General Front Page Styles
+  =========================
+  */
   .entry-header {
     height: 90vh;
-    background: url('./images/inhabitent-logo-full.svg') no-repeat center 50%;
+    background: url('./images/inhabitent-logo-full.svg') no-repeat center 40%;
     background-size: 20%;
+    z-index: 1;
     
     h1 {
       display: none;
-      // color: transparent;
     }
   }
 
@@ -22,30 +27,93 @@
 
   .entry-content {
     margin: 0 auto;  
-    width: $content-width;
+    max-width: $content-width;
   }
 
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+  }
 
-  .wp-block-column {
-    
+  /*
+  =========================
+  Journal on Front Page Styles
+  =========================
+  */
+
+  .journal-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2%;
+    justify-items: center;
+  }
+  
+  .journal {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    
+    width: 100%;
 
-    .wp-block-image {
+    .img {
+      width: 80%;
+    }
+    
+    .journal-content {
+      position: relative;
+      // display: flex;
+      // flex-flow: column nowrap;
       
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
+      height: 100%;
+      padding: 10px;
+  
+      border: 1px solid $light-grey-border;
+      border-top: 5px solid $light-grey-border;
+    }
+    
+    p {
+      margin: 0;
 
-      margin: 0 auto;
+      a {
+        color: $dark-grey-font;
 
-      img {
-        width: 30%;
+        &:hover,
+        &:active,
+        &:target {
+          color: $dark-grey-font;
+        }
       }
+    }
 
-      p {
-        width: 50%;
+    h3, .read-more-button {
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin: 0;
+      margin-bottom: 20%;
+
+      text-align: start;
+      color: $green-brand-colour;  
+    }
+
+    .read-more-button {
+      display: inline-block;
+      position: absolute;
+      bottom: 10px;
+      
+      width: 40%;
+      padding: 10px 15px;
+
+      border: 1px solid $purple-brand-colour;
+      color: $purple-brand-colour;
+      text-align: center;
+
+      &:hover,
+      &:active,
+      &:target {
+        background-color: $green-brand-colour;
+        border: 1px solid $green-brand-colour;
+        color: white;
       }
     }
   }

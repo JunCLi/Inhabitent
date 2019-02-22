@@ -26,7 +26,7 @@ if ( ! function_exists( 'demo_theme_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'demo-theme' ),
+			esc_html_x( '%s', 'post date', 'demo-theme' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -146,3 +146,25 @@ if ( ! function_exists( 'demo_theme_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+/**
+ * Outputs number of comments on a post
+ */
+if (!function_exists('demo_theme_comment_number')) :
+	function demo_theme_comment_number() {
+		$num_comments = get_comments_number();
+
+		if ( comments_open() ) {
+			if ($num_comments === 1) {
+				$comments = $num_comments . __(' Comment');
+			} else {
+				$comments = $num_comments . __(' Comments');
+			}
+			$write_comments = '<a href="' . get_comments_link() . '">' . $comments . '</a>';
+		} else {
+			$write_comments = __('No comments');
+		}
+		echo $write_comments;
+	}
+endif;
+
