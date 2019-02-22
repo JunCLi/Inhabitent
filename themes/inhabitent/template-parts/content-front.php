@@ -41,20 +41,22 @@
     <section class="shop-stuff-section">
       <h2>Shop Stuff</h2> 
 
-      <div class="shop-container">  
-        <?php $terms =get_terms ( array(
+      <div class="shop-container"> 
+        <?php 
+          $shopTypeArgs = array(
           'taxonomy' => 'product_type',
           'hide_empty' => false,
           'number' => 4,
-        ));
+          );
 
-        foreach ($terms as $term) : ?>
-          <div class="product-type">
-            <img src='https://via.placeholder.com/150'>
-            <p><?php echo $term->description ?></p>
-            <a href="<?php echo get_term_link($term); ?>" class="btn"><?php echo 
-          $term->name; ?></a>
-          </div>
+          $shopTypes = get_terms($shopTypeArgs);
+
+          foreach ($shopTypes as $shopType) : ?>
+            <div class="product-type">
+              <img src='https://via.placeholder.com/150'>
+              <p><?php echo $shopType->description ?></p>
+              <a href="<?php echo get_term_link($shopType); ?>" class="btn"><?php echo $shopType->name; ?></a>
+            </div>
 
         <?php endforeach; ?>
       </div>
@@ -65,7 +67,10 @@
       <h2>Inhabitent Journal</h2>
 
       <?php
-        $journalPostsArgs = array('post_type' => 'post', 'posts_per_page' => 3);
+        $journalPostsArgs = array(
+          'post_type' => 'post',
+          'posts_per_page' => 3
+        );
         $journalPosts = get_posts($journalPostsArgs);
         ?>
 
@@ -83,7 +88,7 @@
               <a class="read-more-button" href="<?php the_permalink(); ?>">Read Entry</a>
             </div>
           </div>
-        <?php endforeach;  wp_reset_postdata();?>
+        <?php endforeach;  wp_reset_postdata(); ?>
         </div>
     </section>
 
