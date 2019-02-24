@@ -66,16 +66,16 @@
     <section class="journal-section">
       <h2>Inhabitent Journal</h2>
 
+      <div class="journal-container">
       <?php
         $journalPostsArgs = array(
           'post_type' => 'post',
           'posts_per_page' => 3
         );
+        
         $journalPosts = get_posts($journalPostsArgs);
-        ?>
-
-        <div class="journal-container">
-        <?php foreach ($journalPosts as $post) : setup_postdata($post); ?>
+        
+        foreach ($journalPosts as $post) : setup_postdata($post); ?>
           <div class="journal">
             <?php the_post_thumbnail('large'); ?>
             <div class="journal-content">
@@ -89,14 +89,31 @@
             </div>
           </div>
         <?php endforeach;  wp_reset_postdata(); ?>
-        </div>
+      </div>
     </section>
 
     <section class="adventure-section">
       <h2>Latest Adventures</h2>
+
+      <div class="adventure-container"> 
       <?php 
-        // $adventure
-      ?>
+        $adventurePostsArgs = array(
+          'post_type' => 'adventure',
+          'post_per_page' => 4
+        );
+
+        $adventurePosts = get_posts($adventurePostsArgs);
+
+        foreach ($adventurePosts as $key => $post) : setup_postdata($post); ?>
+          <div class="adventure adventure-<?php echo $key ?>" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<?php echo get_the_post_thumbnail_url() ?>') 50% 70% no-repeat; background-size: 160% auto;">
+            
+            <div class="adventure-content">
+              <h3><?php the_title() ?></h3>
+              <a class="read-more-button" href="<?php the_permalink(); ?>">Read More</a>
+            </div>
+          </div>
+        <?php endforeach; wp_reset_postdata(); ?>
+      </div>
     </section>
 
 	</div><!-- .entry-content -->
