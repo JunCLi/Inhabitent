@@ -145,6 +145,16 @@ function add_file_types_to_uploads($file_types) {
 add_action('upload_mimes', 'add_file_types_to_uploads');
 
 /**
+ * load all posts
+ */
+function post_all_posts($query) {
+	if ($query->is_main_query() && is_post_type_archive) {
+		$query->set('posts_per_page', '9');
+	}
+}
+add_action('pre_get_posts', 'posts_all_posts');
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
