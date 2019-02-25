@@ -27,7 +27,7 @@
 				<p><span>Sunday</span> Closed</p>
 			</div>
 			<div class="text-logo">
-				<img src="../images/inhabitent-logo-text.svg">
+				<img src="<?php echo get_stylesheet_uri(); ?>/../images/inhabitent-logo-text.svg">
 			</div>
 		</div>	
 		<div class="site-info">

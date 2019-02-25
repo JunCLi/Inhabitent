@@ -147,12 +147,12 @@ add_action('upload_mimes', 'add_file_types_to_uploads');
 /**
  * load all posts
  */
-function post_all_posts($query) {
-	if ($query->is_main_query() && is_post_type_archive) {
-		$query->set('posts_per_page', '9');
+function post_all_products($query) {
+	if ($query->is_main_query() && is_post_type_archive()) {
+		$query->set('posts_per_page', '-1');
 	}
 }
-add_action('pre_get_posts', 'posts_all_posts');
+add_action('pre_get_posts', 'post_all_products');
 
 /**
  * Implement the Custom Header feature.

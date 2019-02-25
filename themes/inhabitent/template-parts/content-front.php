@@ -55,10 +55,10 @@
             <div class="product-type">
               <img src='https://via.placeholder.com/150'>
               <p><?php echo $shopType->description ?></p>
-              <a href="<?php echo get_term_link($shopType); ?>" class="btn"><?php echo $shopType->name; ?></a>
+              <a href="<?php echo get_term_link($shopType); ?>" class="btn"><?php echo $shopType->name; ?> Stuff</a>
             </div>
 
-        <?php endforeach; ?>
+        <?php endforeach; wp_reset_postdata(); ?>
       </div>
     </section>
 

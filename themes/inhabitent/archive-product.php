@@ -12,15 +12,28 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main container">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
+				<h1>Shop Stuff</h1>
+				<nav class=shop-type-nav>
+					<ul>
+						<?php
+							$shopTypeArgs = array(
+								'taxonomy' => 'product_type',
+								'hide_empty' => false,
+								'number' => 4,
+							);
+
+							$shopTypes = get_terms($shopTypeArgs);
+
+							foreach ($shopTypes as $shopType) : ?>
+								<li><a href="<?php echo get_term_link($shopType); ?>"><?php echo $shopType->name; ?></a></li> 
+							<?php endforeach; wp_reset_postdata(); ?>
+					</ul>
+				</nav>
 			</header><!-- .page-header -->
 			<section class="shop-content">
 			<?php
