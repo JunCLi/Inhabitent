@@ -176,6 +176,28 @@
     --noOfGutters: calc(var(--noOfColumns) - 1);
 
     --rowHeight: calc((var(--wrapperWidth) - var(--noOfGutters) * var(--gutter)) / var(--noOfColumns));
+
+    .adventure-archive {
+      margin: 30px 0;
+
+      a {
+        display: inline-block;
+    
+        padding: $button-padding 2 * $button-padding;
+
+        background-color: $green-brand-colour;
+        border: 1px solid $green-brand-colour;
+        color: white;
+        text-transform: uppercase;
+
+        &:hover,
+        &:active,
+        &:target {
+          background-color: darken($green-brand-colour, 10%);
+          border: 1px solid darken($green-brand-colour, 10%);
+        }
+      }
+    }
   }
   
   @media screen and (min-width: 1120px) {
@@ -219,6 +241,12 @@
     h3 {
       color: white;
       font-size: 1.5em;
+
+      &:hover,
+      &:active,
+      &:target {
+        color: $yellow-brand-colour;
+      }
     }
 
     a {
@@ -237,6 +265,7 @@
       }
     }
   }
-
+  
+  
 
 }

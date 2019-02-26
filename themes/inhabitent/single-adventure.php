@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About
+ * Template Name: Full Cover Single Article
  * The template for displaying all about page
  *
  * This is the template that displays all pages by default.

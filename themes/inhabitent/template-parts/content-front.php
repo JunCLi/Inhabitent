@@ -114,6 +114,7 @@
           </div>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
+      <p class="adventure-archive"><a href="./adventure">More Adventures</a></p>
     </section>
 
 	</div><!-- .entry-content -->
