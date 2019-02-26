@@ -15,23 +15,13 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="footer-info">
-			<div class="contact-info">
-				<h4>Contact Info</h3>
-				<a>info@inhabitent.com</a>
-				<a>778-456-7891</a>
-			</div>
-			<div>
-				<h4>Business Hours </h4>
-				<p><span>Monday-Friday:</span> 9am to 5pm</p>
-				<p><span>Saturday:</span> 10am to 2pm</p>
-				<p><span>Sunday</span> Closed</p>
-			</div>
+			<?php dynamic_sidebar( 'sidebar-2' ); ?>
 			<div class="text-logo">
 				<img src="<?php echo get_stylesheet_uri(); ?>/../images/inhabitent-logo-text.svg">
 			</div>
 		</div>	
 		<div class="site-info">
-			
+			<p>copyright © 2019 Inhabitent</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

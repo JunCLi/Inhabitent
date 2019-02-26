@@ -1,25 +1,48 @@
 .site-footer {
   width: 100vw;
+
   background: url('./images/dark-wood.png') repeat center;
+  color: white;
+
+  a {
+    color: white;
+
+    &:hover,
+    &:active,
+    &:target {
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+
+    color: $orange-brand-colour;
+    text-transform: uppercase;
+  }
 
   .footer-info {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    justify-items: center;
 
-
-    margin: 0 10%;  
+    max-width: $content-width;
+    padding: 5% 0;
+    margin: 0 auto;  
 
     .text-logo {
+      justify-self: end;
 
       width: 50%;
+      margin-right: 10%;
       
       img {
-        width: 500px;
-        height: 50%;
+        max-width: 300px;
       }
     }
   }
 
-
+  .site-info p {
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
