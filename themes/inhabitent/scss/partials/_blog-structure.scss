@@ -7,12 +7,12 @@
 
   .content-area {
     padding: $blog-structure-padding $blog-structure-padding 0 0;
-
-    border-right: 1px solid $light-grey-border;
   }
 
   .widget-area {
     padding: $blog-structure-padding 0 0 $blog-structure-padding;
+    
+    border-left: 1px solid $light-grey-border;
   }
 
 }

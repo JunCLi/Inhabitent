@@ -14,7 +14,7 @@
     }
   }
 
-  h2 {
+  h3 {
     margin-top: 0;
 
     color: $orange-brand-colour;
@@ -44,5 +44,9 @@
   .site-info p {
     text-align: center;
     text-transform: uppercase;
+  }
+
+  .footer-widget-title {
+    text-align: start;
   }
 }
