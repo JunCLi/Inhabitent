@@ -36,13 +36,25 @@ General Navagation Styles
 =========================
 */
 
+.main-navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+
+  div {
+    margin: 0;
+  }
+}
+
 .main-navigation ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
 
+
   li {
-    padding: 0 10px
+    padding: 0 15px
   }
 
   a {
@@ -52,6 +64,36 @@ General Navagation Styles
     &:hover {
       color: $purple-brand-colour;
     }
+  }
+}
+
+/*
+=========================
+Search Styles
+=========================
+*/
+
+.search-form {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  
+  .search-toggle {
+    display: inline-block;
+    margin-left: 10px;
+
+    color: $green-brand-colour;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .search-field {
+    margin: 0;
+    margin-left: 20px;
+
+    background: none;
+    border: none;
   }
 }
 
@@ -77,6 +119,12 @@ Dark Theme Header Styles
     color: white;
     &:hover {
       color: $yellow-brand-colour;
+    }
+  }
+
+  .search-form {
+    .search-toggle, .search-field, .search-field::placeholder {
+      color: white;
     }
   }
 }

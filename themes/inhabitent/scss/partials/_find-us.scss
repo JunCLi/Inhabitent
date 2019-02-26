@@ -6,6 +6,38 @@
 
   .content-area {
     padding: $blog-structure-padding $blog-structure-padding 0 0;
+
+    form {
+      label {
+        text-transform: uppercase;
+      }
+
+      input, textarea {
+        margin-top: 10px;
+        padding: 5px;
+
+        background-color: $light-grey-input-field;
+        border-radius: 0;
+      }
+
+      input[type=submit] {
+        padding: 10px 20px;
+
+        background-color: $green-brand-colour;
+        border: 1px solid $green-brand-colour;
+        border-radius: 0;
+        color: white;
+        font-size: 0.9em;
+        text-transform: uppercase;
+
+        &:hover,
+        &:active,
+        &:target {
+          background-color: darken($green-brand-colour, 10%);
+          border: 1px solid darken($green-brand-colour, 10%);
+        }
+      }
+    }
   }
 
   .widget-area {
@@ -13,37 +45,4 @@
 
     border-left: 1px solid $light-grey-border;
   }
-
-  form {
-    label {
-      text-transform: uppercase;
-    }
-
-    input, textarea {
-      margin-top: 10px;
-      padding: 5px;
-
-      background-color: $light-grey-input-field;
-      border-radius: 0;
-    }
-
-    input[type=submit] {
-      padding: 10px 20px;
-
-      background-color: $green-brand-colour;
-      border: 1px solid $green-brand-colour;
-      border-radius: 0;
-      color: white;
-      font-size: 0.9em;
-      text-transform: uppercase;
-
-      &:hover,
-      &:active,
-      &:target {
-        background-color: darken($green-brand-colour, 10%);
-        border: 1px solid darken($green-brand-colour, 10%);
-      }
-    }
-  }
-
 }
