@@ -44,13 +44,12 @@ get_header();
 						</div>
 					<?php endforeach; wp_reset_postdata(); ?>
 				</div>
-				<p class="adventure-archive"><a href="./adventure">More Adventures</a></p>
 			</section>
 			<?php the_posts_navigation();
 
 		else :
 
-			get_template_part( 'template-parts/content-shop', 'none' );
+			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>

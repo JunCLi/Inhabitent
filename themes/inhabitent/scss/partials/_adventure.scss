@@ -47,13 +47,44 @@
 }
 
 .single-adventure {
+  --coverWidth: 100vw;
+  --coverHeight: calc(var(--coverWidth) * 2 / 3);
+
+
+  .entry-thumbnail {
+
+    height: var(--coverHeight);
+  }
+
   .post-thumbnail {
     position: absolute;
-    top: -200px;
+    top: 0;
     left: 0;
     
     height: 100vh;
-    width: 100vw;
+    // width: 100vw;
     z-index: -1;
+  }
+
+  .entry-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .entry-header {
+    text-transform: uppercase;
+  }
+
+  .entry-body {
+    margin: 5% 0 10%;
+  }
+
+  .black-sm-button {
+    padding: 10px 20px;
+
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0;
+    text-transform: uppercase;
   }
 }
