@@ -23,6 +23,9 @@
 			<div class="entry-meta">
 				<?php
 				demo_theme_posted_on();
+				echo " / ";
+				demo_theme_comment_number();
+				echo " / ";
 				// demo_theme_comments_link();
 				demo_theme_posted_by();
 				?>

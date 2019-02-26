@@ -62,8 +62,4 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content<?php 
-		if ( is_home() ) :
-			echo ' container';
-		endif; ?>
-	">
+	<div id="content" class="site-content">

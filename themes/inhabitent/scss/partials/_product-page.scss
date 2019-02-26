@@ -1,17 +1,25 @@
 .archive {
+  // .site-main {
+  //   max-width: $content-width;
+  //   margin: 0 auto;
+  // }
+
   .site-header {
     border-bottom: 1px solid $light-grey-border;
   }
 
   .page-header {
     padding: 5% 0;
-    border-bottom: 1px dashed $light-grey-brand-colour;
-
-    text-transform: uppercase;
+    border-bottom: 1px dashed $grey-dashed-border;
+    text-align: center;
   }
 
   h1 {
-    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .taxonomy-description {
+    text-transform: none;
   }
 
   .shop-type-nav ul {
@@ -23,6 +31,7 @@
     margin: 0 auto;
 
     list-style: none;
+    text-transform: uppercase;
 
     a {
       color: $green-brand-colour;

@@ -6,6 +6,11 @@ Site Head Styles
 
 .site-header {
   padding: .5rem 0;
+  
+  div {
+    max-width: $content-width;
+    margin: 0 auto;
+  }
 
   .container {
     display: flex;

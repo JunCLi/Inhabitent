@@ -4,8 +4,12 @@ General Styles
 =========================
 */
 
-.container {
-  max-width: 1120px;
+.page {
+  margin: 0;
+}
+
+.site-content {
+  max-width: $content-width;
   margin: 0 auto;
 }
 

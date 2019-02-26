@@ -1,7 +1,7 @@
-// Overlapping blog design structure
+  // Overlapping blog design structure
 .blog, .single {
   .site-header {
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid $light-grey-border;
   }
 
   .site-content {
@@ -12,7 +12,7 @@
   .content-area {
     padding: $blog-structure-padding $blog-structure-padding 0 0;
 
-    border-right: 1px solid #e1e1e1;
+    border-right: 1px solid $light-grey-border;
   }
 
   .widget-area {
@@ -27,11 +27,11 @@ Individual blog entries
 =========================
 */
 
-.single {
-  .site-content {
-    max-width: $content-width;
-    margin: 0 auto;
-  }
+.blog, .single {
+  // .site-content {
+  //   max-width: $content-width;
+  //   margin: 0 auto;
+  // }
 
   article {
 
@@ -43,13 +43,19 @@ Individual blog entries
 
       text-transform: uppercase;
   
-      h1 {
+      h1, .entry-title {
         position: absolute;
         width: 75%;
+        margin: 5% 0;
         padding: 1% 4.5%;
         
         background-color: $green-brand-colour;
         color: white;
+        font-size: 2em;
+
+        a {
+          color: white;
+        }
       }
   
       .entry-meta {
@@ -67,6 +73,5 @@ Individual blog entries
         }
       }
     }
-
   }
 }

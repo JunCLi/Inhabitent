@@ -149,7 +149,7 @@ add_action('upload_mimes', 'add_file_types_to_uploads');
  */
 function post_all_products($query) {
 	if ($query->is_main_query() && is_post_type_archive()) {
-		$query->set('posts_per_page', '-1');
+		$query->set('posts_per_page', '16');
 	}
 }
 add_action('pre_get_posts', 'post_all_products');
