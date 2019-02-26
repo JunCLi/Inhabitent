@@ -23,6 +23,11 @@ Site Head Styles
 .site-branding {
   width: $brand-logo-width;
   height: $brand-logo-width * 2 / 3;
+
+  a {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /*
@@ -52,15 +57,38 @@ General Navagation Styles
 
 /*
 =========================
-Light Theme Header Styles
+Dark Theme Header Styles
 =========================
 */
 
-.home {
+.home, .page-template-page-about, .single-adventure {
+  .site-branding {
+    a {
+      background: url('./images/inhabitent-logo-tent-white.svg');
+      background-size: 100%;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
   .main-navigation ul a {
     color: white;
     &:hover {
       color: $yellow-brand-colour;
     }
+  }
+}
+
+/*
+=========================
+Light Theme Header Styles
+=========================
+*/
+
+body:not(.home):not(.page-template-page-about):not(.single-adventure) {
+  .site-header {
+    border-bottom: 1px solid $light-grey-border;
   }
 }

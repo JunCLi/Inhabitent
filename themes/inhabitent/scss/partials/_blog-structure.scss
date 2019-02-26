@@ -1,9 +1,5 @@
   // Overlapping blog design structure
 .blog, .single-post {
-  .site-header {
-    border-bottom: 1px solid $light-grey-border;
-  }
-
   .site-content {
     display: grid;
     grid-template-columns: 8fr 3fr;
