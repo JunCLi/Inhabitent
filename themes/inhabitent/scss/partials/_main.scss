@@ -4,12 +4,13 @@ General Styles
 =========================
 */
 
-.page {
+.site {
   margin: 0;
 }
 
 .site-content {
   max-width: $content-width;
+  min-height: 60vh;
   margin: 0 auto;
 }
 

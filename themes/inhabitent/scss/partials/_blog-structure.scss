@@ -1,5 +1,5 @@
   // Overlapping blog design structure
-.blog, .single {
+.blog, .single-post {
   .site-header {
     border-bottom: 1px solid $light-grey-border;
   }
@@ -27,7 +27,7 @@ Individual blog entries
 =========================
 */
 
-.blog, .single {
+.blog, .single-post {
   // .site-content {
   //   max-width: $content-width;
   //   margin: 0 auto;

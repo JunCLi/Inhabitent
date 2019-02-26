@@ -24,7 +24,7 @@
     <?php
       $customFields = get_post_custom();
       $priceArray = $customFields['price'];
-      forEach ($priceArray as $price) :?>
+      foreach ($priceArray as $price) :?>
         <p class="price"><?php echo $price ?></p>
       <?php endforeach;
     ?>

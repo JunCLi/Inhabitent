@@ -31,7 +31,6 @@ General Navagation Styles
 =========================
 */
 
-
 .main-navigation ul {
   display: flex;
   flex-flow: row nowrap;
@@ -50,6 +49,12 @@ General Navagation Styles
     }
   }
 }
+
+/*
+=========================
+Light Theme Header Styles
+=========================
+*/
 
 .home {
   .main-navigation ul a {
