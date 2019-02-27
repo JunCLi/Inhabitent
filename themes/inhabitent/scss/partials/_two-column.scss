@@ -1,5 +1,5 @@
 // Overlapping two-column design structure
-.blog, .single-post, .search-results {
+.blog, .single-post, .search-results, .page-template-default:not(.home) {
   .site-content {
     display: grid;
     grid-template-columns: 8fr 3fr;

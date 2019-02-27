@@ -164,7 +164,7 @@ function post_all_products($query) {
 		$query->set('order', 'ASC');
 	}
 
-	if ($query->is_main_query() && is_tax('product')) {
+	if ($query->is_main_query() && is_tax()) {
 		$query->set('orderby', 'title');
 		$query->set('order', 'ASC');
 	}

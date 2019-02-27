@@ -1,12 +1,5 @@
 .page-template-default {
-  .site-content {
-    display: grid;
-    grid-template-columns: 8fr 3fr;
-  }
-
   .content-area {
-    padding: $blog-structure-padding $blog-structure-padding 0 0;
-
     form {
       label {
         text-transform: uppercase;
@@ -38,11 +31,5 @@
         }
       }
     }
-  }
-
-  .widget-area {
-    padding: $blog-structure-padding 0 0 $blog-structure-padding;
-
-    border-left: 1px solid $light-grey-border;
   }
 }

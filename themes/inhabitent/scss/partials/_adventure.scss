@@ -25,24 +25,6 @@
         color: $yellow-brand-colour;
       }
     }
-
-    a {
-      padding: 10px 20px;
-
-      color: white;
-    }
-
-    .read-more-button {
-      border: 1px solid white;
-      text-transform: uppercase;
-      
-      &:hover,
-      &:active,
-      &:target {
-        background-color: $green-brand-colour;
-        border: 1px solid $green-brand-colour;
-      }
-    }
   }
 }
 
