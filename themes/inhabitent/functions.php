@@ -158,8 +158,15 @@ add_action('upload_mimes', 'add_file_types_to_uploads');
  * load all posts
  */
 function post_all_products($query) {
-	if ($query->is_main_query() && is_post_type_archive()) {
+	if ($query->is_main_query() && is_post_type_archive('product')) {
 		$query->set('posts_per_page', '16');
+		$query->set('orderby', 'title');
+		$query->set('order', 'ASC');
+	}
+
+	if ($query->is_main_query() && is_tax('product')) {
+		$query->set('orderby', 'title');
+		$query->set('order', 'ASC');
 	}
 }
 add_action('pre_get_posts', 'post_all_products');
