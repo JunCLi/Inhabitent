@@ -47,8 +47,4 @@
 			</div>
 		</div><!-- .entry-content -->
 	</main>
-
-	<footer class="entry-footer">
-		<?php demo_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

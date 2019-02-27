@@ -5,10 +5,10 @@
     grid-auto-rows: 500px;
     grid-gap: 2%;
 
-    margin: 5% 0;
+    margin: 5% 0 10%;
 
     .adventure {
-      padding: 5% 5%;
+      padding: $base-spacing;
     }
 
     .adventure-content {
@@ -17,7 +17,12 @@
 
     h3 {
       color: white;
+      font-family: 'Merriweather', sans-serif;
       font-size: 3em;
+      font-weight: lighter;
+      line-height: 1.25;
+      text-transform: none;
+      
 
       &:hover,
       &:active,
@@ -55,6 +60,18 @@
 
   .entry-header {
     text-transform: uppercase;
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0;
+    }
+  }
+
+  .entry-meta {
+    font-size: 1.25em;
+    a {
+      color: $dark-grey-font;
+    }
   }
 
   .entry-body {

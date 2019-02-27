@@ -1,12 +1,13 @@
 .archive {
   .page-header {
-    padding: 5% 0;
+    padding: 2.5% 0;
     border-bottom: 1px dashed $grey-dashed-border;
     text-align: center;
   }
 
   h1 {
     text-transform: uppercase;
+    font-size: 2.5em;
   }
 
   .taxonomy-description {
@@ -19,7 +20,7 @@
     justify-content: space-between;
 
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto 2.5%;
 
     list-style: none;
     text-transform: uppercase;

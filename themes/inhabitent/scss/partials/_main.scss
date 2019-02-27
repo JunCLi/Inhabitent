@@ -109,3 +109,12 @@ a {
     }
   }
 }
+
+.black-sm-button {
+  padding: $base-spacing / 2 $base-spacing;
+
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  text-transform: uppercase;
+}

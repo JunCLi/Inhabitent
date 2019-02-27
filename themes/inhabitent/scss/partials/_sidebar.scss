@@ -1,11 +1,18 @@
 .widget-area {
-  h3 {
+  .widget-title {
+    font-size: 1.5em;
     text-transform: uppercase;
   }
 
   a {
     text-decoration: none;
     color: $green-brand-colour;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $purple-brand-colour;
+    }
   }
 
   span {

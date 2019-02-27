@@ -19,14 +19,21 @@ Individual blog entries
       position: absolute;
       width: 75%;
       margin: 5% 0;
-      padding: 1% 4.5%;
+      padding: $base-spacing / 4 $base-spacing ;
       
       background-color: $green-brand-colour;
       color: white;
-      font-size: 2em;
+      font-size: 2.5em;
+      line-height: 1.25em;
 
       a {
         color: white;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $yellow-brand-colour;
+        }
       }
     }
 
