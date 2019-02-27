@@ -94,6 +94,14 @@ Search Styles
 
     background: none;
     border: none;
+
+    &:hover,
+    &:active,
+    &:target,
+    &:focus {
+      border: none;
+      outline: none;
+    }
   }
 }
 

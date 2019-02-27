@@ -17,19 +17,21 @@
 		<div class="entry-meta">
 			<?php
 			demo_theme_posted_on();
+			echo " / ";
+			demo_theme_comment_number();
+			echo " / ";
+			// demo_theme_comments_link();
 			demo_theme_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php demo_theme_post_thumbnail(); ?>
-
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
-		<?php demo_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<div>
+		<a class="read-more-button" href="<?php the_permalink(); ?>">Read More →</a>
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->

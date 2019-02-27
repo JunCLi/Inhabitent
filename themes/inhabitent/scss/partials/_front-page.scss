@@ -184,7 +184,7 @@
       a {
         display: inline-block;
     
-        padding: $button-padding 2 * $button-padding;
+        padding: $base-spacing / 2 $base-spacing;
 
         background-color: $green-brand-colour;
         border: 1px solid $green-brand-colour;
