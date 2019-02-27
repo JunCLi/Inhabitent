@@ -1,0 +1,17 @@
+// Overlapping two-column design structure
+.blog, .single-post, .search-results {
+  .site-content {
+    display: grid;
+    grid-template-columns: 8fr 3fr;
+  }
+
+  .content-area {
+    padding: $blog-structure-padding $blog-structure-padding 0 0;
+  }
+
+  .widget-area {
+    padding: $blog-structure-padding 0 0 $blog-structure-padding;
+    
+    border-left: 1px solid $light-grey-border;
+  }
+}

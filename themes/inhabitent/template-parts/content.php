@@ -36,24 +36,12 @@
 
 
 	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'demo-theme' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'demo-theme' ),
-			'after'  => '</div>',
-		) );
-		?>
+		<div class="dark-read-more-button">
+			<a href="<?php the_permalink(); ?>">Read More →</a>
+		</div>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

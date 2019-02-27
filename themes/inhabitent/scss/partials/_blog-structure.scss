@@ -1,22 +1,3 @@
-  // Overlapping blog design structure
-.blog, .single-post, .search-results {
-  .site-content {
-    display: grid;
-    grid-template-columns: 8fr 3fr;
-  }
-
-  .content-area {
-    padding: $blog-structure-padding $blog-structure-padding 0 0;
-  }
-
-  .widget-area {
-    padding: $blog-structure-padding 0 0 $blog-structure-padding;
-    
-    border-left: 1px solid $light-grey-border;
-  }
-
-}
-
 /*
 =========================
 Individual blog entries
@@ -24,49 +5,55 @@ Individual blog entries
 */
 
 .blog, .single-post {
-  // .site-content {
-  //   max-width: $content-width;
-  //   margin: 0 auto;
-  // }
-
   article {
 
     .entry-header {
       position: relative;
   
       width: 100%;
-      // height: 100%;
 
       text-transform: uppercase;
+    }
   
-      h1, .entry-title {
-        position: absolute;
-        width: 75%;
-        margin: 5% 0;
-        padding: 1% 4.5%;
-        
-        background-color: $green-brand-colour;
-        color: white;
-        font-size: 2em;
+    h1, .entry-title {
+      position: absolute;
+      width: 75%;
+      margin: 5% 0;
+      padding: 1% 4.5%;
+      
+      background-color: $green-brand-colour;
+      color: white;
+      font-size: 2em;
 
-        a {
-          color: white;
-        }
+      a {
+        color: white;
       }
-  
-      .entry-meta {
-        position: absolute;
-        right: 0;
-        bottom: 7px;
+    }
 
-        padding: 0.5% 5%;
+    .entry-meta {
+      position: absolute;
+      right: 0;
+      bottom: 9px;
 
-        background-color: $green-brand-colour;
+      padding: 0.5% 5%;
+
+      background-color: $green-brand-colour;
+      color: white;
+
+      a {
         color: white;
+      }
+    }
 
-        a {
-          color: white;
-        }
+    .entry-content {
+      margin: $base-spacing 0 $base-spacing * 1.5;
+    }
+
+    .entry-summary {
+      margin: 0;
+      
+      p {
+        margin: 0;
       }
     }
   }

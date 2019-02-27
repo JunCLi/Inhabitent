@@ -28,3 +28,28 @@ Site Content Styles
 a {
   text-decoration: none;
 }
+
+.dark-read-more-button {
+  margin: $base-spacing 0;
+
+  a {
+    padding: $base-spacing / 2  $base-spacing;
+    
+    border: 1px solid black;
+    color: black;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active,
+    &:target,
+    &:focus {
+      background-color: $green-brand-colour;
+      border: 1px solid $green-brand-colour;
+      color: white;
+    }
+
+    &:visited {
+      color: black;
+    }
+  }
+}
