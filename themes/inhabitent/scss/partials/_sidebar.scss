@@ -19,6 +19,11 @@
     font-weight: bold;
   }
 
+  .fas {
+    width: $base-spacing / 4;
+    margin-right: $base-spacing;
+  }
+
   .widget_archive {
     ul {
       margin: 0;
