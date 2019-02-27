@@ -65,3 +65,26 @@ Individual blog entries
     }
   }
 }
+
+.single-post {
+  .entry-footer {
+    span {
+      margin-right: $base-spacing;
+      text-transform: uppercase;
+
+      a {
+        color: $green-brand-colour;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $green-brand-colour;
+        }
+      }
+    }
+
+    .black-sm-button {
+      margin: $base-spacing 0;
+    }
+  }
+}

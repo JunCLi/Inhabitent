@@ -29,18 +29,16 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 			$demo_theme_comment_count = get_comments_number();
-			if ( '1' === $demo_theme_comment_count ) {
+			if ( $demo_theme_comment_count === '0') {
+
+			} else if ( '1' === $demo_theme_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'demo-theme' ),
-					'<span>' . get_the_title() . '</span>'
+					'1 comment'
 				);
 			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $demo_theme_comment_count, 'comments title', 'demo-theme' ) ),
-					number_format_i18n( $demo_theme_comment_count ),
-					'<span>' . get_the_title() . '</span>'
+				printf(
+					$demo_theme_comment_count . ' comments'
 				);
 			}
 			?>
