@@ -21,6 +21,26 @@ body {
 
 /*
 =========================
+Font Styles
+=========================
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Novecentosanswide-Medium', sans-serif;
+  font-weight: bolder;
+}
+
+.entry-meta {
+  font-family: 'Novecentosanswide-Book', sans-serif;
+}
+
+p {
+  font-family: 'Merriweather', sans-serif;
+}
+
+
+/*
+=========================
 Site Content Styles
 =========================
 */

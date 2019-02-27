@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Novecentosanswide-Medium';
+  src: url('./fonts/Novecentosanswide-Medium-webfont.woff2') format('woff2'),
+       url('./fonts/Novecentosanswide-Medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Novecentosanswide-Light';
+  src: url('./fonts/Novecentosanswide-Light-webfont.woff2') format('woff2'),
+       url('./fonts/Novecentosanswide-Light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Novecentosanswide-Book';
+  src: url('./fonts/Novecentosanswide-Book-webfont.woff2') format('woff2'),
+       url('./fonts/Novecentosanswide-Book-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('./fonts/Merriweather-Light.eot');
+  src: url('./fonts/Merriweather-Light.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Merriweather-Light.woff2') format('woff2'),
+      url('./fonts/Merriweather-Light.woff') format('woff'),
+      url('./fonts/Merriweather-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}

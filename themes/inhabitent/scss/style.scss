@@ -15,8 +15,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
 
-@import './partials/variables';
 @import './partials/starter';
+@import './partials/variables';
+
+@import './partials/font';
 @import './partials/sidebar';
 @import './partials/header';
 @import './partials/footer';

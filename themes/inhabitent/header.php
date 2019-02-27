@@ -19,6 +19,7 @@
 	<meta name="description" content="Inhabitent Camping Website">
 
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet"> -->
 
 	<?php wp_head(); ?>
 </head>
