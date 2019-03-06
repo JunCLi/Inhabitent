@@ -43,6 +43,15 @@
 
       <div class="shop-container"> 
         <?php 
+          $shopTypeImages = array(
+            "do",
+            "eat",
+            "sleep",
+            "wear"
+          );
+
+          $shopTypeCounter = 0;
+
           $shopTypeArgs = array(
           'taxonomy' => 'product_type',
           'hide_empty' => false,
@@ -53,11 +62,14 @@
 
           foreach ($shopTypes as $shopType) : ?>
             <div class="product-type">
-              <img src='https://via.placeholder.com/150'>
+              <img src='<?php echo get_stylesheet_uri()?>/../images/<?php echo $shopTypeImages[$shopTypeCounter]?>.svg'>
               <p><?php echo $shopType->description ?></p>
-              <a href="<?php echo get_term_link($shopType); ?>" class="btn"><?php echo $shopType->name; ?> Stuff</a>
+              <div class="green-read-more-button">
+                <a href="<?php echo get_term_link($shopType); ?>" class="btn"><?php echo $shopType->name; ?> Stuff</a>
+              </div>
             </div>
-
+            
+            <?php $shopTypeCounter++ ?>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
     </section>
@@ -84,8 +96,12 @@
                 echo " / ";
                 demo_theme_comment_number() ?>
               </p>
-              <h3><?php the_title() ?></h3>
-              <a class="read-more-button" href="<?php the_permalink(); ?>">Read Entry</a>
+              <a href="href="<?php the_permalink(); ?>"> 
+                <h3><?php the_title() ?></h3>
+              </a>
+              <div class="dark-read-more-button">
+                <a class="dark-read-more-button" href="<?php the_permalink(); ?>">Read Entry</a>
+              </div>
             </div>
           </div>
         <?php endforeach;  wp_reset_postdata(); ?>
@@ -108,18 +124,18 @@
           <div class="adventure adventure-<?php echo $key ?>" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<?php echo get_the_post_thumbnail_url() ?>') 50% 70% no-repeat; background-size: 160% auto;">
             
             <div class="adventure-content">
-              <h3><?php the_title() ?></h3>
-              <a class="read-more-button" href="<?php the_permalink(); ?>">Read More</a>
+              <a href="<?php the_permalink(); ?>">
+                <h3><?php the_title() ?></h3>
+              </a>
+              <div class="adv-read-more-button">
+                <a href="<?php the_permalink(); ?>">Read More</a>
+              </div>
             </div>
           </div>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
-      <p class="adventure-archive"><a href="./adventure">More Adventures</a></p>
+      <p class="green-read-more-button"><a href="./adventure">More Adventures</a></p>
     </section>
 
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php demo_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

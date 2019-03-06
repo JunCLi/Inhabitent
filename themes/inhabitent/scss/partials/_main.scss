@@ -57,6 +57,7 @@ a {
     
     border: 1px solid black;
     color: black;
+    font-family: 'Novecentosanswide-Medium', sans-serif;
     text-transform: uppercase;
 
     &:hover,
@@ -67,9 +68,58 @@ a {
       border: 1px solid $green-brand-colour;
       color: white;
     }
+  }
+}
 
-    &:visited {
-      color: black;
+.green-read-more-button {
+  margin: $base-spacing 0;
+
+  a {
+    padding: $base-spacing / 2  $base-spacing;
+    
+    background-color: $green-brand-colour;
+    border: 1px solid $green-brand-colour;
+    color: white;
+    font-family: 'Novecentosanswide-Medium', sans-serif;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active,
+    &:target,
+    &:focus {
+      background-color: darken($green-brand-colour, 10%);
+      border: 1px solid darken($green-brand-colour, 10%);
     }
+  }
+}
+
+.adv-read-more-button {
+  a {
+    padding: $base-spacing / 2  $base-spacing;
+    
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    
+    &:hover,
+    &:active,
+    &:target {
+      background-color: $green-brand-colour;
+      border: 1px solid $green-brand-colour;
+    }
+  }
+}
+
+.black-sm-button {
+  padding: $base-spacing / 2 $base-spacing;
+
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  font-size: 0.9em;
+  text-transform: uppercase;
+
+  .fab {
+    padding-right: $base-spacing / 3;
   }
 }

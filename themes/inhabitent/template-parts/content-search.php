@@ -31,7 +31,7 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
-	<div>
-		<a class="read-more-button" href="<?php the_permalink(); ?>">Read More →</a>
+	<div class="dark-read-more-button">
+		<a href="<?php the_permalink(); ?>">Read More →</a>
 	</div>
 </article><!-- #post-<?php the_ID(); ?> -->

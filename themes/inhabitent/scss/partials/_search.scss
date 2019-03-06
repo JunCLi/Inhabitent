@@ -1,8 +1,4 @@
 .search-results {
-  article {
-    margin-bottom: 75px;
-  }
-
   h1, h2 {
     text-transform: uppercase;
   }
@@ -15,22 +11,15 @@
     font-size: 2.5em;
   }
 
-  h2 {
+  article {
+    margin-bottom: 75px;
 
-    font-size: 2em;
-    a {
-      color: $green-brand-colour;
+    h2 {
+
+      font-size: 2em;
+      a {
+        color: $green-brand-colour;
+      }
     }
-  }
-
-  a {
-    color: $purple-brand-colour;
-  }
-
-  .read-more-button {
-    padding: $base-spacing / 2  $base-spacing;
-    
-    border: 1px solid $purple-brand-colour;
-    text-transform: uppercase
   }
 }

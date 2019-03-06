@@ -62,14 +62,14 @@ if ( ! function_exists( 'demo_theme_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'demo-theme' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'demo-theme' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in → %1$s', 'demo-theme' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'demo-theme' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'demo-theme' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged → %1$s', 'demo-theme' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
@@ -91,23 +91,6 @@ if ( ! function_exists( 'demo_theme_entry_footer' ) ) :
 			);
 			echo '</span>';
 		}
-
-		edit_post_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'demo-theme' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
 	}
 endif;
 

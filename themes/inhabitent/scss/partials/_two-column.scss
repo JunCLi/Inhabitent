@@ -1,8 +1,10 @@
 // Overlapping two-column design structure
-.blog, .single-post, .search-results {
+.blog, .single-post, .search-results, .page-template-default:not(.home), .error404 {
   .site-content {
     display: grid;
     grid-template-columns: 8fr 3fr;
+
+    margin-bottom: 2.5%;
   }
 
   .content-area {

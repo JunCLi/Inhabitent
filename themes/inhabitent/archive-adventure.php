@@ -38,8 +38,12 @@ get_header();
 						<div class="adventure adventure-<?php echo $key ?>" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<?php echo get_the_post_thumbnail_url() ?>') 50% 70% no-repeat; background-size: 160% auto;">
 							
 							<div class="adventure-content">
-								<h3><?php the_title() ?></h3>
-								<a class="read-more-button" href="<?php the_permalink(); ?>">Read More</a>
+								<a href="<?php the_permalink(); ?>">
+									<h3><?php the_title() ?></h3>
+								</a>
+								<div class="adv-read-more-button">
+                	<a href="<?php the_permalink(); ?>">Read More</a>
+              	</div>
 							</div>
 						</div>
 					<?php endforeach; wp_reset_postdata(); ?>

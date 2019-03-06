@@ -36,19 +36,15 @@
 
 			<div class="social-media-buttons">
 				<button type="button" class="black-sm-button">
-					Like
+					<i class="fab fa-facebook-f"></i> Like
 				</button>
 				<button type="button" class="black-sm-button">
-					Tweet
+					<i class="fab fa-twitter"></i>Tweet
 				</button>
 				<button type="button" class="black-sm-button">
-					Pin
+					<i class="fab fa-pinterest"></i> Pin
 				</button>
 			</div>
 		</div><!-- .entry-content -->
 	</main>
-
-	<footer class="entry-footer">
-		<?php demo_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -1,0 +1,90 @@
+/*
+=========================
+Individual blog entries
+=========================
+*/
+
+.blog, .single-post {
+  article {
+
+    .entry-header {
+      position: relative;
+  
+      width: 100%;
+
+      text-transform: uppercase;
+    }
+  
+    h1, .entry-title {
+      position: absolute;
+      width: 75%;
+      margin: 5% 0;
+      padding: $base-spacing / 4 $base-spacing ;
+      
+      background-color: $green-brand-colour;
+      color: white;
+      font-size: 2.5em;
+      line-height: 1.25em;
+
+      a {
+        color: white;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $yellow-brand-colour;
+        }
+      }
+    }
+
+    .entry-meta {
+      position: absolute;
+      right: 0;
+      bottom: 9px;
+
+      padding: 0.5% 5%;
+
+      background-color: $green-brand-colour;
+      color: white;
+
+      a {
+        color: white;
+      }
+    }
+
+    .entry-content {
+      margin: $base-spacing 0 $base-spacing * 1.5;
+    }
+
+    .entry-summary {
+      margin: 0;
+      
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.single-post {
+  .entry-footer {
+    span {
+      margin-right: $base-spacing;
+      text-transform: uppercase;
+
+      a {
+        color: $green-brand-colour;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $green-brand-colour;
+        }
+      }
+    }
+
+    .black-sm-button {
+      margin: $base-spacing 0;
+    }
+  }
+}

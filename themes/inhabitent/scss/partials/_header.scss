@@ -89,6 +89,7 @@ Search Styles
   }
 
   .search-field {
+    width: 0;
     margin: 0;
     margin-left: 20px;
 
@@ -102,6 +103,12 @@ Search Styles
       border: none;
       outline: none;
     }
+
+    transition: width 2s;
+  }
+
+  .show-search {
+    width: 250px;
   }
 }
 

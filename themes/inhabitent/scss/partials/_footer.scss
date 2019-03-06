@@ -14,10 +14,11 @@
     }
   }
 
-  h3 {
+  .footer-widget-title {
     margin-top: 0;
 
     color: $orange-brand-colour;
+    font-size: 1.25em;
     text-transform: uppercase;
   }
 
@@ -26,7 +27,7 @@
     grid-template-columns: 1fr 1fr 2fr;
 
     max-width: $content-width;
-    padding: 5% 0;
+    padding: 5% 0 2.5%;
     margin: 0 auto;  
 
     .text-logo {
